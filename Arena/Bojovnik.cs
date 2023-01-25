@@ -11,9 +11,9 @@ namespace Arena
         private string zprava;
         private string jmeno;
         private int zivot;
-        private int maxZivot;
-        private int utok;
-        private int obrana;
+        public int maxZivot;
+        public int utok;
+        public int obrana;
         private Kostka kostka;
 
         public Bojovnik(string jmeno, int zivot, int utok, int obrana, Kostka kostka)
