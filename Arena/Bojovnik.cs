@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Arena
 {
     internal class Bojovnik
     {
         private string zprava;
-        private string jmeno;
+        protected string jmeno;
         private int zivot;
         public int maxZivot;
         public int utok;
         public int obrana;
-        private Kostka kostka;
+        protected Kostka kostka;
 
         public Bojovnik(string jmeno, int zivot, int utok, int obrana, Kostka kostka)
         {
@@ -25,7 +22,7 @@ namespace Arena
             this.obrana = obrana;
             this.kostka = kostka;
         }
-        public void UlozitZpravu(string zprava)
+        protected void UlozitZpravu(string zprava)
         {
             this.zprava = zprava;
         }
@@ -50,7 +47,7 @@ namespace Arena
                 zprava = $"{jmeno} odrazil útok";
             UlozitZpravu(zprava);
         }
-        public void Utok(Bojovnik souper)
+        public virtual void Utok(Bojovnik souper)
         {
             int uder = utok + kostka.HodKostkou();
             UlozitZpravu($"{jmeno} útočí úderem za {uder} hp");

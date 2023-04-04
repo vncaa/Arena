@@ -40,7 +40,7 @@ namespace Arena
 
             //zacina druhy bojovnik, pokud padlo cislo mensi jak polovina stran kostky
             bool zacinaBojovnik2 = (kostka.HodKostkou() <= kostka.PocetStran() / 2);
-            if(zacinaBojovnik2)
+            if (zacinaBojovnik2)
             {
                 b1 = bojovnik2;
                 b2 = bojovnik1;
